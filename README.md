@@ -40,8 +40,8 @@ ls -lh /srv/tftp/cfg/OLT/2020-10-17/
 Every archive contains:
 ```
 config.db_OLT_Name
-ifindex-config_Name
-startup-config_Name
+ifindex-config_OLT_Name
+startup-config_OLT_Name
 ```
 
 * Cron job example:
