@@ -7,6 +7,7 @@ It makes backups from multiple devices same time (tune "NumProcs" variable).
 * Supported models:
 ```
 P3310C
+P3310D
 P3608B
 P3608-2TE
 P3616-2TE

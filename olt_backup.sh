@@ -7,7 +7,7 @@ Inventory=$1
 
 # TFTP server parameters
 TftpIP="192.168.20.20"
-# TFTP path from OLT. e.g.: "copy flash:startup-config tftp://${TftpRemotePath}startup-config 192.168.20.20"
+# TFTP path in OLT "copy" command. e.g.: "copy flash:startup-config tftp://${TftpRemotePath}startup-config 192.168.20.20"
 TftpRemotePath="cfg/OLT/$(date +%Y-%m-%d)/"
 # Local TFTP directory on the server:
 TftpLocalPath="/srv/tftp/"
