@@ -29,13 +29,13 @@ OLT_Gogolya_7 192.168.10.14 P3608B
 ```
 You will get archives on your tftp server:
 ```
-ls -lh /srv/tftp/cfg/OLT/2020-10-17/
+ls -lh /srv/tftp/cfg/OLT/OLT_Pushkina_3/
 
--rw-r--r-- 1 root root  17K Nov 17 05:00 OLT_Pushkina_3_192.168.10.10.tar.gz
--rw-r--r-- 1 root root  13K Nov 17 05:00 OLT_Lermontova_5_192.168.10.11.tar.gz
--rw-r--r-- 1 root root  20K Nov 17 05:00 OLT_Lenina_2_192.168.10.12.tar.gz
--rw-r--r-- 1 root root  59K Nov 17 05:00 OLT_Tolstogo_15_192.168.10.13.tar.gz
--rw-r--r-- 1 root root  15K Nov 17 05:00 OLT_Gogolya_7_192.168.10.14.tar.gz
+-rw-r--r-- 1 root root 26K Jul 11 05:32 2021-07-11_OLT_Pushkina_3_192.168.10.10.tar.gz
+-rw-r--r-- 1 root root 26K Jul 12 05:32 2021-07-12_OLT_Pushkina_3_192.168.10.10.tar.gz
+-rw-r--r-- 1 root root 26K Jul 13 05:32 2021-07-13_OLT_Pushkina_3_192.168.10.10.tar.gz
+-rw-r--r-- 1 root root 26K Jul 14 05:32 2021-07-14_OLT_Pushkina_3_192.168.10.10.tar.gz
+-rw-r--r-- 1 root root 26K Jul 15 05:32 2021-07-15_OLT_Pushkina_3_192.168.10.10.tar.gz
 ```
 
 Every archive contains:
@@ -43,6 +43,7 @@ Every archive contains:
 config.db_OLT_Name
 ifindex-config_OLT_Name
 startup-config_OLT_Name
+running-config_OLT_Name
 ```
 
 * Cron job example:
