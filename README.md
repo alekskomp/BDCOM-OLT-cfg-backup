@@ -1,23 +1,18 @@
 # BDCOM GEPON OLT configuration backup script
 
-Script must run on tftp server.
+Script must be run on tftp server. In my case tftp runs on Debian.
 
-It makes backups from multiple devices same time (tune "NumProcs" variable).
+It creates backups of several devices at the same time (tune `NumProcs` variable).
 
-* Supported models:
-```
-P3310C
-P3310D
-P3608B
-P3608-2TE
-P3616-2TE
-```
+* Supported all BDCOM GEPON OLT models.
 
-* Usage:
+## Usage
+
 ```
 ./olt_backup.sh olt_inventory.txt
 ```
-Inventory file must be like this:
+
+The inventory file should look like this:
 
 (name ip_address model)
 ```
@@ -27,9 +22,9 @@ OLT_Lenina_2 192.168.10.12 P3608B
 OLT_Tolstogo_15 192.168.10.13 P3616-2TE
 OLT_Gogolya_7 192.168.10.14 P3608B
 ```
-You will get archives on your tftp server:
+You will get the archives on your tftp server:
 ```
-ls -lh /srv/tftp/cfg/OLT/OLT_Pushkina_3/
+ls -lh /srv/tftp/OLT_backups/OLT_Pushkina_3/
 
 -rw-r--r-- 1 root root 26K Jul 11 05:32 2021-07-11_OLT_Pushkina_3_192.168.10.10.tar.gz
 -rw-r--r-- 1 root root 26K Jul 12 05:32 2021-07-12_OLT_Pushkina_3_192.168.10.10.tar.gz
@@ -48,8 +43,9 @@ running-config_OLT_Name
 
 * Cron job example:
 
+/etc/cron.d/olt_backup
 ```shell
-/etc/cron.d/olt_backup 
-
 0 5 * * * root /opt/backup/olt_backup.sh /opt/backup/olt_inventory.txt > /dev/null 2>&1
 ```
+
+Backup logs are stored in `/var/log/olt_backup_logs/` by default.
